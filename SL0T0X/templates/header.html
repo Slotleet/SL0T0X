@@ -48,18 +48,6 @@
                             </a>
                         </li>
                         <!--                     TODO: Adding Tools  -->
-                        <!--                  <li class="nav-item dropdown">-->
-                        <!--                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-                        <!--                      <span data-feather='tool'></span>-->
-                        <!--                       Tools-->
-                        <!--                    </a>-->
-                        <!--                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-                        <!--                      <a class="dropdown-item" href="{{ url_for('Nmap') }}"><small><span data-feather='figma'></span> Nmap</small></a>-->
-                        <!--&lt;!&ndash;                      <a class="dropdown-item" href="#">Another action</a>&ndash;&gt;-->
-                        <!--&lt;!&ndash;                      <div class="dropdown-divider"></div>&ndash;&gt;-->
-                        <!--&lt;!&ndash;                      <a class="dropdown-item" href="#">Something else here</a>&ndash;&gt;-->
-                        <!--                    </div>-->
-                        <!--                  </li>-->
                         <li class='nav-item'>
                             <a class='nav-link {{ "active" if "Settings" in request.path else "" }}' href='{{ url_for("Sett") }}'>
                                 <span data-feather='settings'></span> Settings

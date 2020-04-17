@@ -1,0 +1,84 @@
+ {% extends "header.html" %} {% block content %}
+<main role='main' class='col-md-9 ml-sm-auto col-lg-10 pt-3 px-4'>
+    <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom'>
+        <h1 class='h2'><span data-feather='codepen' class='settings'></span> Penetration Testing Project</h1>
+    </div>
+    <br/>
+    <div class='container'>
+        {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+        <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+            <span><span data-feather='bell'></span> {{ message }}</span>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <form action="" method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    {{ form.name.label }} {{ form.name(class='form-control', placeholder='John Doe') }} {% if form.name.errors %} {% for error in form.name.errors %}
+                    <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+                </div>
+                <div class="form-group col-md-6">
+                    {{ form.Birthday.label }} {{ form.Birthday(class='form-control', placeholder='m/d/yyy') }} {% if form.Birthday.errors %} {% for error in form.Birthday.errors %}
+                    <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+                </div>
+                <div class="form-group col-md-6">
+                    {{ form.emailaddress.label }} {{ form.emailaddress(class='form-control', placeholder='example@company.com') }} {% if form.emailaddress.errors %} {% for error in form.emailaddress.errors %}
+                    <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+                </div>
+                <div class="form-group col-md-6">
+                    {{ form.pnumber.label }} {{ form.pnumber(class='form-control', placeholder='+1 123 345 678') }} {% if form.pnumber.errors %} {% for error in form.pnumber.errors %}
+                    <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    {{ form.location.label }} {{ form.location(class='form-control', placeholder='World, CE, #9281, First floor, BP Building.') }} {% if form.location.errors %} {% for error in form.location.errors %}
+                    <small class="form-text text-danger ">
+            {{ error }}
+            </small> {% endfor %} {% endif %}
+                </div>
+                <div class="form-group col-md-6">
+                    {{ form.accounts.label }} {{ form.accounts(class='form-control', placeholder='Facebook, Twitter, Whatsapp, etc...') }} {% if form.accounts.errors %} {% for error in form.accounts.errors %}
+                    <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form.note.label }} {{ form.note(class='form-control', rows=10) }} {% if form.note.errors %} {% for error in form.note.errors %}
+                <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    {{ form.picture.label }} {{ form.picture(class='form-control-file') }} {% if form.picture.errors %} {% for error in form.picture.errors %}
+                    <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+                </div>
+                <div class="form-group col-md-6">
+                    {{ form.archive.label }} {{ form.archive(class='form-control-file') }} {% if form.archive.errors %} {% for error in form.archive.errors %}
+                    <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+                </div>
+            </div>
+            {{ form.submit(class='btn btn-sm btn-outline-secondary') }}
+
+        </form>
+    </div>
+    <br>
+</main>
+{% endblock content %}

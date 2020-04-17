@@ -1,0 +1,28 @@
+{% extends "header.html" %} {% block content %}
+<main role='main' class='col-md-9 ml-sm-auto col-lg-10 pt-3 px-4'>
+    <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom'>
+        <h1 class='h2'><span data-feather='frown' class='home'></span> 404 Not Found</h1>
+    </div>
+    <br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="error-template">
+                    <h1>
+                    Oops!</h1>
+                    <h2>
+                    404 Not Found</h2>
+                    <div class="error-details">
+                        Sorry, an error has occured, Requested page not found!
+                    </div>
+                    <br/>
+                    <div class="error-actions">
+                        <a href="{{ url_for('Index') }}" class="btn btn-secondary btn-lg"><span class="glyphicon glyphicon-home"></span>
+                        Take Me Home </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock content %}

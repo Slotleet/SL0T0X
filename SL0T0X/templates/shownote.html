@@ -1,0 +1,34 @@
+ {% extends "header.html" %} {% block content %}
+
+<main role='main' class='col-md-9 ml-sm-auto col-lg-10 pt-3 px-4'>
+    <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom'>
+        <h1 class='h2'><span data-feather='feather' class='notes'></span> {{ note.name }} - #{{ note.id }}</h1>
+        <div class='btn-toolbar mb-2 mb-md-0'>
+            <a href="{{ url_for('Notes') }}">
+                <button class='btn btn-sm btn-outline-secondary'>
+                    <span data-feather='arrow-left'></span> Back
+                </button>
+            </a>&nbsp;&nbsp;
+            <a href="{{ url_for('DelNote', nid=note.id) }}">
+                <button class='btn btn-sm btn-outline-secondary'><span data-feather='trash'></span> Delete
+                </button>
+            </a>&nbsp;&nbsp;
+            <a href="{{ url_for('EditNote', ID=note.id) }}">
+                <button class='btn btn-sm btn-outline-secondary'>
+                    <span data-feather='edit'></span> Edit
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class='row justify-content-center'></div>
+    <br/>
+    <div class='table-responsive'>
+        <div class="container">
+            <div style="margin: 0px;padding: 15px;min-height:550px;background-color: #f8f9fa;color: #272c30;" class="jumbotron">
+                {{ mark | safe }}
+            </div>
+        </div>
+
+    </div>
+</main>
+{% endblock content %}

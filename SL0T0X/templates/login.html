@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta name='description' content='Modular web based penetration testing interface'>
+    <meta name='author' content='Slotleet'>
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='{{ url_for("static", filename="css/bootstrap.min.css") }}'>
+    <!-- Custom styles for this template -->
+    <link href='{{ url_for("static", filename="css/login.css") }}' rel='stylesheet'>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-octagon'%3E%3Cpolygon points='7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2'%3E%3C/polygon%3E%3C/svg%3E">
+    <title>SL0T0X - {{ title }}</title>
+</head>
+
+<body class='jura-bold'>
+    <form class='form-signin' action='' method='POST'>
+        {{ form.hidden_tag() }}
+        <div class='text-center mb-4'>
+            <h1><span class='feather-16' data-feather='octagon'></span></h1>
+            <h1 class='h1 mb-3 font-weight-normal jura ml3'>SL0T0X</h1>
+        </div>
+        {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+        <div class="alert alert-secondary fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <div class='form-label-group'>
+            {{ form.username(class='form-control', placeholder='Username', autofocus=true) }} {{ form.username.label() }} {% if form.username.errors %} {% for error in form.username.errors %}
+            <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+        </div>
+        <div class='form-label-group'>
+            {{ form.password(class='form-control', placeholder='Password') }} {{ form.password.label() }} {% if form.password.errors %} {% for error in form.password.errors %}
+            <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+        </div>
+        <div class='checkbox mb-3'>
+            {{ form.remember() }} {{ form.remember.label() }}
+        </div>
+        {{ form.submit(class='btn btn-lg btn-secondary btn-block') }}
+        <p class='mt-5 mb-3 text-muted text-center'><span class='feather-24' data-feather='chevron-right'> </span>SL0T0X {{ year }}</p>
+    </form>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src='{{ url_for("static", filename="js/jquery-3.2.1.slim.min.js") }}'></script>
+    <script src='{{ url_for("static", filename="js/popper.min.js") }}'></script>
+    <script src='{{ url_for("static", filename="js/bootstrap.min.js") }}'></script>
+    <script src='{{ url_for("static", filename="js/anime.min.js") }}'></script>
+    <script src='{{ url_for("static", filename="js/site.js") }}'></script>
+    <!-- Icons -->
+    <script src='{{ url_for("static", filename="js/feather.min.js") }}'></script>
+    <script>
+        feather.replace()
+    </script>
+</body>
+
+</html>

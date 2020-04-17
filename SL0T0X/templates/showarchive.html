@@ -1,0 +1,41 @@
+{% extends "header.html" %} {% block content %}
+<!-- TODO: Adding Modal to view files & Pictures -->
+
+<main role='main' class='col-md-9 ml-sm-auto col-lg-10 pt-3 px-4'>
+    <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom'>
+        <h1 class='h2'><span data-feather='pocket' class='SE'></span> {{ pt.name }} - #{{ pt.id }}</h1>
+        <div class='btn-toolbar mb-2 mb-md-0'>
+            <a href="{{ url_for('ShowPerson', Pid=pt.id) }}">
+                <button class='btn btn-sm btn-outline-secondary'>
+                    <span data-feather='arrow-left'></span> Back
+                </button>
+            </a>&nbsp;
+            <!-- TODO: Add Delete File -->
+            <!--         <a href="{{ url_for('DelSE', nid=2) }}"><button class='btn btn-sm btn-outline-secondary'><span data-feather='trash'></span>-->
+            <!--         Delete-->
+            <!--         </button></a>-->
+        </div>
+    </div>
+    <br/>
+    <div class='container-fluid'>
+        <div class="container">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">Filename:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for arc in archive %}
+                    <tr>
+                        <th><span data-feather="file"></span> <a href="/static/uploads/SE/{{pt.name}}/archive/{{arc}}">{{ arc }}</a></th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+</main>
+
+{% endblock content %}

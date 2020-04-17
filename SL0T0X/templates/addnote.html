@@ -1,0 +1,43 @@
+{% extends "header.html" %} {% block content %}
+
+<main role='main' class='col-md-9 ml-sm-auto col-lg-10 pt-3 px-4'>
+    <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom'>
+        <h1 class='h2'><span data-feather='feather' class='settings'></span> Add Note</h1>
+        <div class='btn-toolbar mb-2 mb-md-0'>
+
+            <a href="{{ url_for('Notes') }}">
+                <button class='btn btn-sm btn-outline-secondary'>
+                    <span data-feather='arrow-left'></span> Back
+                </button>
+            </a>
+        </div>
+    </div>
+    <br/>
+    <div class='container'>
+        {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+        <div class="alert alert-secondary" role="alert">
+            <span data-feather='bell'></span> {{message}}</div>
+        {% endfor %} {% endif %} {% endwith %}
+        <form action="" method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.name.label }} {{ form.name(class='form-control') }} {% if form.name.errors %} {% for error in form.name.errors %}
+                <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+
+            </div>
+            <div class="form-group">
+                {{ form.note.label }} {{ form.note(class='form-control', rows=10, cols=40) }} {{ simplemde.load }} {% if form.note.errors %} {% for error in form.note.errors %}
+                <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+            </div>
+
+            {{ form.submit(class='btn btn-sm btn-outline-secondary') }}
+        </form>
+
+    </div>
+</main>
+
+{% endblock content %}

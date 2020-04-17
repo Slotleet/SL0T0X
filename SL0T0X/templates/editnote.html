@@ -1,0 +1,43 @@
+ {% extends "header.html" %} {% block content %}
+<main role='main' class='col-md-9 ml-sm-auto col-lg-10 pt-3 px-4'>
+    <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom'>
+        <h1 class='h2'><span data-feather='feather' class='notes'></span> {{ note.name }} - #{{ note.id }}</h1>
+        <div class='btn-toolbar mb-2 mb-md-0'>
+            <a href="{{ url_for('Notes') }}">
+                <button class='btn btn-sm btn-outline-secondary'>
+                    <span data-feather='arrow-left'></span> Back
+                </button>
+            </a>&nbsp;&nbsp;
+            <a href="{{ url_for('DelNote', nid=note.id) }}">
+                <button class='btn btn-sm btn-outline-secondary'><span data-feather='trash'></span> Delete
+                </button>
+            </a>&nbsp;&nbsp;
+
+        </div>
+    </div>
+    <div class='row justify-content-center'></div>
+    <br/>
+    <div class='table-responsive'>
+        <form action="" method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.name.label }} {{ form.name(class='form-control', value=note.name) }} {% if form.name.errors %} {% for error in form.name.errors %}
+                <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+
+            </div>
+            <div class="form-group">
+                {{ form.note.label }}
+                <textarea name="note" class="form-control" rows="10">{{ note.note }}</textarea>
+                {{ simplemde.load }} {% if form.note.errors %} {% for error in form.note.errors %}
+                <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+            </div>
+
+            {{ form.submit(class='btn btn-sm btn-outline-secondary') }}
+        </form>
+    </div>
+</main>
+{% endblock content %}

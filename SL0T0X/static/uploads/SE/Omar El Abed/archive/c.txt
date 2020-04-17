@@ -1,0 +1,265 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: c.txt
+START_TIME: Tue Apr  7 16:10:30 2020
+URL_BASE: http://localhost/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://localhost/ ----
++ http://localhost/info.php (CODE:200|SIZE:51)
+==> DIRECTORY: http://localhost/lab/
+==> DIRECTORY: http://localhost/phpmyadmin/
++ http://localhost/server-status (CODE:200|SIZE:5930)
+
+---- Entering directory: http://localhost/lab/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://localhost/phpmyadmin/ ----
++ http://localhost/phpmyadmin/ChangeLog (CODE:200|SIZE:27390)
+==> DIRECTORY: http://localhost/phpmyadmin/doc/
+==> DIRECTORY: http://localhost/phpmyadmin/examples/
++ http://localhost/phpmyadmin/favicon.ico (CODE:200|SIZE:22486)
++ http://localhost/phpmyadmin/index.php (CODE:200|SIZE:10386)
+==> DIRECTORY: http://localhost/phpmyadmin/js/
+==> DIRECTORY: http://localhost/phpmyadmin/libraries/
++ http://localhost/phpmyadmin/LICENSE (CODE:200|SIZE:18092)
++ http://localhost/phpmyadmin/phpinfo.php (CODE:200|SIZE:10388)
++ http://localhost/phpmyadmin/README (CODE:200|SIZE:1520)
++ http://localhost/phpmyadmin/robots.txt (CODE:200|SIZE:26)
+==> DIRECTORY: http://localhost/phpmyadmin/setup/
+==> DIRECTORY: http://localhost/phpmyadmin/sql/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/
+==> DIRECTORY: http://localhost/phpmyadmin/themes/
+==> DIRECTORY: http://localhost/phpmyadmin/vendor/
+
+---- Entering directory: http://localhost/phpmyadmin/doc/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/doc/html/
+
+---- Entering directory: http://localhost/phpmyadmin/examples/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/js/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/js/database/
+==> DIRECTORY: http://localhost/phpmyadmin/js/server/
+==> DIRECTORY: http://localhost/phpmyadmin/js/setup/
+==> DIRECTORY: http://localhost/phpmyadmin/js/table/
+==> DIRECTORY: http://localhost/phpmyadmin/js/transformations/
+==> DIRECTORY: http://localhost/phpmyadmin/js/vendor/
+
+---- Entering directory: http://localhost/phpmyadmin/libraries/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/libraries/certs/
+==> DIRECTORY: http://localhost/phpmyadmin/libraries/classes/
+
+---- Entering directory: http://localhost/phpmyadmin/setup/ ----
++ http://localhost/phpmyadmin/setup/index.php (CODE:200|SIZE:1002)
+==> DIRECTORY: http://localhost/phpmyadmin/setup/lib/
+
+---- Entering directory: http://localhost/phpmyadmin/sql/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/templates/components/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/config/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/console/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/database/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/display/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/error/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/export/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/home/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/javascript/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/list/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/login/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/navigation/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/preferences/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/rte/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/server/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/setup/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/sql/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/table/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/test/
+
+---- Entering directory: http://localhost/phpmyadmin/themes/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/themes/original/
+
+---- Entering directory: http://localhost/phpmyadmin/vendor/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/vendor/composer/
+==> DIRECTORY: http://localhost/phpmyadmin/vendor/google/
+==> DIRECTORY: http://localhost/phpmyadmin/vendor/phpmyadmin/
+
+---- Entering directory: http://localhost/phpmyadmin/doc/html/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/doc/html/_images/
++ http://localhost/phpmyadmin/doc/html/index.html (CODE:200|SIZE:14929)
+
+---- Entering directory: http://localhost/phpmyadmin/js/database/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/js/server/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/js/server/status/
+
+---- Entering directory: http://localhost/phpmyadmin/js/setup/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/js/table/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/js/transformations/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/js/vendor/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/js/vendor/jquery/
+
+---- Entering directory: http://localhost/phpmyadmin/libraries/certs/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/libraries/classes/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/libraries/classes/Server/
+
+---- Entering directory: http://localhost/phpmyadmin/setup/lib/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/components/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/config/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/console/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/database/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/templates/database/search/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/database/tracking/
+
+---- Entering directory: http://localhost/phpmyadmin/templates/display/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/templates/display/export/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/display/import/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/display/results/
+
+---- Entering directory: http://localhost/phpmyadmin/templates/error/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/export/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/home/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/javascript/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/list/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/login/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/navigation/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/templates/navigation/tree/
+
+---- Entering directory: http://localhost/phpmyadmin/templates/preferences/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/templates/preferences/forms/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/preferences/manage/
+
+---- Entering directory: http://localhost/phpmyadmin/templates/rte/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/server/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/templates/server/databases/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/server/engines/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/server/plugins/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/server/replication/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/server/status/
+
+---- Entering directory: http://localhost/phpmyadmin/templates/setup/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/templates/setup/config/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/setup/form/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/setup/home/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/setup/servers/
+
+---- Entering directory: http://localhost/phpmyadmin/templates/sql/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/table/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/templates/table/chart/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/table/insert/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/table/operations/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/table/search/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/table/tracking/
+
+---- Entering directory: http://localhost/phpmyadmin/templates/test/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/themes/original/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/themes/original/css/
+==> DIRECTORY: http://localhost/phpmyadmin/themes/original/img/
+==> DIRECTORY: http://localhost/phpmyadmin/themes/original/jquery/
+
+---- Entering directory: http://localhost/phpmyadmin/vendor/composer/ ----
++ http://localhost/phpmyadmin/vendor/composer/LICENSE (CODE:200|SIZE:2919)
+
+---- Entering directory: http://localhost/phpmyadmin/vendor/google/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/vendor/phpmyadmin/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/doc/html/_images/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/js/server/status/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/js/vendor/jquery/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/libraries/classes/Server/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/database/search/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/database/tracking/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/display/export/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/display/import/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/display/results/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/navigation/tree/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/preferences/forms/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/preferences/manage/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/server/databases/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/server/engines/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/server/plugins/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/server/replication/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/server/status/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/templates/server/status/monitor/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/server/status/queries/
+==> DIRECTORY: http://localhost/phpmyadmin/templates/server/status/status/
+
+---- Entering directory: http://localhost/phpmyadmin/templates/setup/config/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/setup/form/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/setup/home/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/setup/servers/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/table/chart/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/table/insert/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/table/operations/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/table/search/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/table/tracking/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/themes/original/css/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/themes/original/img/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/themes/original/jquery/ ----
+==> DIRECTORY: http://localhost/phpmyadmin/themes/original/jquery/images/
+
+---- Entering directory: http://localhost/phpmyadmin/templates/server/status/monitor/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/server/status/queries/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/templates/server/status/status/ ----
+
+---- Entering directory: http://localhost/phpmyadmin/themes/original/jquery/images/ ----
+
+-----------------
+END_TIME: Tue Apr  7 16:11:08 2020
+DOWNLOADED: 355124 - FOUND: 12

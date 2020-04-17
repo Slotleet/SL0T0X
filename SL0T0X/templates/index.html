@@ -1,0 +1,63 @@
+ {% extends "header.html" %} {% block content %}
+<main role='main' class='col-md-9 ml-sm-auto col-lg-10 pt-3 px-4'>
+    <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom'>
+        <h1 class='h2'><span data-feather='home' class='home'></span> Dashboard</h1>
+        <div class='btn-toolbar mb-2 mb-md-0'>
+            <a href="{{ url_for('AddPentest') }}">
+                <button class='btn btn-sm btn-outline-secondary'>
+                    <span data-feather='plus'></span> New Project
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class='row justify-content-center'>
+        <div class='btn-group mr-2'>
+            {% if prev %}
+            <a href="{{ prev }}">
+                <button class='btn btn-sm btn-outline-secondary'><span data-feather='arrow-left'></span></button>
+            </a>
+            {% else %}
+            <button class='btn btn-sm btn-outline-secondary' disabled><span data-feather='arrow-left'></span></button>
+            {% endif %} {% if next %}
+            <a href="{{ next }}">
+                <button class='btn btn-sm btn-outline-secondary'><span data-feather='arrow-right'></span></button>
+            </a>
+            {% else %}
+            <button class='btn btn-sm btn-outline-secondary' disabled><span data-feather='arrow-right'></span></button>
+            {% endif %}
+        </div>
+    </div>
+    <br/> {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+    <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+        <span><span data-feather='bell'></span> {{ message }}</span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %} {% endif %} {% endwith %}
+    <div class='table-responsive'>
+        <table class='table table-borderless table-hover'>
+            <thead>
+                <tr>
+                    <th><span data-feather='hash'></span></th>
+                    <th>URL</th>
+                    <th>Ip address</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pt in pt.items %}
+                <tr>
+                    <td>{{ pt.id }}</td>
+                    <td><a href='{{ url_for("ShowPentest", Pid=pt.id) }}'>{{ pt.url }}</a></td>
+                    <td>{{ pt.ipaddress }}</td>
+                    <td>{{ pt.date.strftime('%m/%d/%Y %I:%M %p') }}</td>
+                    <td>Active</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</main>
+{% endblock content %}

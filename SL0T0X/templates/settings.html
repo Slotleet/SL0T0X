@@ -1,0 +1,43 @@
+{% extends "header.html" %} {% block content %}
+
+<main role='main' class='col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 jura'>
+    <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom'>
+        <h1 class='h2'><span data-feather='settings' class='settings'></span> Settings - Change Password</h1>
+    </div>
+    <br/>
+    <div class='container'>
+        {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+        <div class="alert alert-secondary fade show" role="alert">
+            <span data-feather='bell'></span> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+
+        <form class='form-signin' action='' method='POST'>
+            {{ form.hidden_tag() }}
+            <div class='form-label-group'>
+                <input type='input' class='form-control' placeholder='Slotleet' readonly>
+                <label>{{ sett.username}} </label>
+            </div>
+
+            <div class='form-label-group'>
+                {{ form.password(class='form-control', placeholder='Password', autofocus=true) }} {{ form.password.label() }} {% if form.password.errors %} {% for error in form.password.errors %}
+                <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+            </div>
+
+            <div class='form-label-group'>
+                {{ form.confirm_password(class='form-control', placeholder='Password') }} {{ form.confirm_password.label() }} {% if form.confirm_password.errors %} {% for error in form.confirm_password.errors %}
+                <small class="form-text text-danger ">
+               {{ error }}
+               </small> {% endfor %} {% endif %}
+            </div>
+            {{ form.submit(class='btn btn-lg btn-secondary btn-block') }}
+        </form>
+    </div>
+</main>
+
+{% endblock content %}

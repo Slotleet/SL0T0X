@@ -1,0 +1,78 @@
+{% extends "header.html" %} {% block content %}
+
+<main role='main' class='col-md-9 ml-sm-auto col-lg-10 pt-3 px-4'>
+    <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom'>
+        <h1 class='h2'><span data-feather='pocket' class='SE'></span> {{ pr.name }} - #{{ pr.id }}</h1>
+        <div class='btn-toolbar mb-2 mb-md-0'>
+            <a href="{{ url_for('SE') }}">
+                <button class='btn btn-sm btn-outline-secondary'>
+                    <span data-feather='arrow-left'></span> Back
+                </button>
+            </a>&nbsp;&nbsp;
+            <a href="{{ url_for('DelSE', nid=pr.id) }}">
+                <button class='btn btn-sm btn-outline-secondary'><span data-feather='trash'></span> Delete
+                </button>
+            </a>
+        </div>
+    </div>
+    <br/>
+    <div class='container-fluid'>
+        <center>
+            <a href="/static/uploads/SE/{{ pr.name }}/{{ pr.avatar }}" target="_blank"><img src="/static/uploads/SE/{{ pr.name }}/{{ pr.avatar }}" class="rounded-circle" height="120" width="120" alt="Cinque Terre"></a>
+            <br/>
+            <br/>{{ pr.name }}</center>
+        <table class="table table-borderless table-striped table-sm">
+            <tbody>
+                <tr>
+                    <label><b><i>Information Gathering</i></b></label>
+                    <td><b>Name</b></td>
+                    <td>{{ pr.name }}</td>
+                </tr>
+                <tr>
+                    <td><b>Birthday</b></td>
+                    <td>{{ pr.birthday }}</td>
+                </tr>
+                <tr>
+                    <td><b>Email Address</b></td>
+                    <td>{{ pr.email }}</td>
+                </tr>
+                <tr>
+                    <td><b>Phone Number</b></td>
+                    <td>{{ pr.pnumber }}</td>
+                </tr>
+
+                <tr>
+                    <td><b>Location</b></td>
+                    <td>{{ pr.location }}</td>
+                </tr>
+                <tr>
+                    <td><b>Accounts</b></td>
+                    <td>{{ pr.accounts }}</td>
+                </tr>
+                <tr>
+                    <td><b>Note</b></td>
+                    <td>{{ pr.note }}</td>
+                </tr>
+                <tr>
+                    <td><b>Created in</b></td>
+                    <td>{{ pr.date.strftime('%m %d %Y %H:%M:%S') }}</td>
+                </tr>
+                <tr>
+                    <td><b>Archive</b></td>
+                    {% if len == 0 %}
+                    <td>{{ len }} - No Files Added</td>
+                    {% else %}
+                    <td>{{ len }} - <a href="{{ url_for('arc', CID=pr.id) }}">Open</a></td>
+                    {% endif %}
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <label>Note</label>
+        <textarea name="content" class="form-control" rows="10" readonly>{{ pr.note }}</textarea>
+        <hr>
+    </div>
+    <br>
+</main>
+
+{% endblock content %}

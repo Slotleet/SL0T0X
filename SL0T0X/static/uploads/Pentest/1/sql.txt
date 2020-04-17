@@ -1,0 +1,14 @@
+POST /demo/modal_ajax/ajaxfile.php HTTP/1.1
+Host: makitweb.com
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://makitweb.com/demo/modal_ajax/index.php
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-Requested-With: XMLHttpRequest
+Content-Length: 8
+Connection: close
+Cookie: mailmunch_second_pageview=true; PHPSESSID=b361bed537f9823551c874eed20b42f1; _mailmunch_visitor_id=1929db91-dfd3-4a2d-84e1-7cdbf7d09420; _mailmunch_seen_month=true
+
+userid=6*
